@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+    h3= books.title
+
+    div
+        p Author:
+        p Genre: #{books.genre}
+        p= books.description
