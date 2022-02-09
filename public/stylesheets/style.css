@@ -6,3 +6,53 @@ body {
 a {
   color: #00B7FF;
 }
+
+.book{
+  display: flex;
+  background-color: #CBD5E1;
+  max-width: 700px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.info{
+  max-width: 450px;
+
+}
+
+.info-one{
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.author{
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 5px;
+  margin-top: 10px;
+}
+
+.cover{
+  padding: 5px;
+
+}
+
+.button{
+  border-radius: 12px;
+  padding: 4px 8px;
+  border: 1px solid grey;
+  background: white;
+  color: black;
+}
+
+.button:hover{
+  background: grey;
+}
+
+.cover-image{
+  width: 230px;
+
+}

@@ -6,6 +6,8 @@ module.exports.viewAll = async function(req, res) {
 }
 
 module.exports.viewProfile = async function(req, res) {
-    const author = await Author.findByPk(req.params.id);
+    const author = await Author.findByPk(req.params.id, {
+        include: 'books'
+    });
     res.render('authors/profile', {author});
 }

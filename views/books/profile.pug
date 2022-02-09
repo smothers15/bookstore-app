@@ -1,9 +1,19 @@
 extends ../layout
 
 block content
-    h3= books.title
 
-    div
-        p Author:
-        p Genre: #{books.genre}
-        p= books.description
+    div.book
+        div.info
+
+            div.info-one
+                h3= books.title
+                p Genre: #{books.genre}
+                p Page Number: #{books.page_number}
+                p Publisher: #{books.publisher}
+                p= books.description
+            div.author
+                each author in books.authors
+                    p Author: #{author.first_name}  #{author.last_name}
+                    a.button(href=`/authors/profile/${author.id}`) View Author
+        div.cover
+            img.cover-image(src=books.cover)
