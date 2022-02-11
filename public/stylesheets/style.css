@@ -5,6 +5,7 @@ body {
 
 a {
   color: #00B7FF;
+  padding: 3px;
 }
 
 .book{
@@ -60,3 +61,5 @@ a {
 .edit{
   padding: 10px;
 }
+
+

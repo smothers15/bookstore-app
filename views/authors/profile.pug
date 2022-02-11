@@ -6,8 +6,10 @@ block content
     div
         p Date of birth: #{author.dob}
 
-    div
+        a.button(href=`/authors/edit/${author.id}`) Edit Author
+
+    div.author-books
         h4 Books Published:
         each book in author.books
             p #{book.title}
-            a(href=`/books/profile/${book.id}`) View Book
+            a.button(href=`/books/profile/${book.id}`) View Book

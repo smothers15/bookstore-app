@@ -33,3 +33,37 @@ module.exports.updateBook = async function(req, res) {
     });
     res.redirect(`/books/profile/${req.params.id}`);
 }
+
+module.exports.renderAddForm = async function(req, res) {
+    const book = {
+        title: '',
+        genre: genres[0],
+        page_number: 0,
+        publisher: '',
+        cover: '',
+        description: ''
+    }
+    res.render('books/add', {book, genres});
+
+}
+
+module.exports.addBook = async function(req, res) {
+    const book = await Book.create({
+        title: req.body.title,
+        genre: req.body.genre,
+        page_number: req.body.page_number,
+        publisher: req.body.publisher,
+        cover: req.body.cover,
+        description: req.body.description
+    });
+    res.redirect(`/books/profile/${book.id}`);
+}
+
+module.exports.deleteBook = async function(req, res) {
+    await Book.destroy({
+        where: {
+            id:req.params.id
+        }
+    });
+    res.redirect('/books');
+}
