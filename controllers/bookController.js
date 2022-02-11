@@ -67,3 +67,11 @@ module.exports.deleteBook = async function(req, res) {
     });
     res.redirect('/books');
 }
+
+module.exports.addAuthor = async function(req, res) {
+    await BookAuthors.create({
+        book_id: req.params.bookId,
+        author_id: req.body.author
+    });
+    res.redirect(`/books/profile/${req.params.bookId}`);
+}

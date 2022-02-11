@@ -15,6 +15,7 @@ block content
                 each author in books.authors
                     p Author: #{author.first_name}  #{author.last_name}
                     a.button(href=`/authors/profile/${author.id}`) View Author
+
         div.cover
             img.cover-image(src=books.cover)
     div.edit

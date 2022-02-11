@@ -7,6 +7,7 @@ block content
         p Date of birth: #{author.dob}
 
         a.button(href=`/authors/edit/${author.id}`) Edit Author
+        a.delete.button(href=`/authors/delete/${author.id}`) Delete Author
 
     div.author-books
         h4 Books Published:

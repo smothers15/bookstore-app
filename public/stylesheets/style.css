@@ -62,4 +62,8 @@ a {
   padding: 10px;
 }
 
+.delete{
+  background-color: red;
+  color: white;
+}
 

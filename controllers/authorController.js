@@ -20,8 +20,8 @@ module.exports.renderEditForm = async function(req, res) {
 
 module.exports.updateAuthor = async function(req, res) {
     const author = await Author.update({
-        first_name: req.body.name,
-        last_name: req.body.name,
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
         dob: req.body.dob
     },{
         where: {
@@ -43,8 +43,8 @@ module.exports.renderAddForm = async function(req, res) {
 
 module.exports.addAuthor = async function(req, res) {
     const author = await Author.create({
-        first_name: req.body.name,
-        last_name: req.body.name,
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
         dob: req.body.dob
     });
     res.redirect(`/authors/profile/${author.id}`);
